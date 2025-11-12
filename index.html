@@ -9,11 +9,20 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div id="nav-logo">
-                <img src="../Descargas/logo (1).png" alt="">
-                <h3>Fit & Strong</h1>
-                <p>Gimnasio • Salud • Fuerza</p>
+        <div id="contenedor-header">
+            <nav>
+            <div id="brand">
+                <svg id="logo" width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1" y="9" width="4" height="6" rx="1" fill="#1E3A8A" />
+                    <rect x="19" y="9" width="4" height="6" rx="1" fill="#1E3A8A" />
+                    <rect x="6" y="10" width="12" height="4" rx="1" fill="#1E3A8A" />
+                </svg>
+                
+                <div>
+                    <h1>Fit & Strong</h1>
+                    <p>Gimnasio • Salud • Fuerza</p>
+                </div>
+                
             </div>
             <div id="nav-links">
                 <ul>
@@ -23,56 +32,185 @@
                     <li><a href="#contacto-e-inscripcion">Contacto</a></li>
                 </ul>
             </div>
-            <a href="#contacto-e-inscripcion" id="incribete">Inscribete</a>
+            <button id="cambio-tema"></button>
+            <div id="login-container">
+                <a href="" id="inicio-sesion">Iniciar sesión</a>
+                <a href="" id="registrar">Registrate</a>
+            </div>
         </nav>
+        <section id="bienvenida">
+            <div id="contenedor-bienvenida">
+                <div>
+                    <h1>Tu mejor versión empieza hoy</h1>
+                    <p>En <b>Fit & Strong</b> combinamos entrenamiento personalizado, clases 
+                        en grupo y<br>planes flexibles para ayudarte 
+                        a alcanzar tus objetivos — fuerza, resistencia o<br>bienestar.
+                    </p>
+                    <div id="bienvenida-botones">
+                        <a href="#precios">Ver planes</a>
+                        <a href="#instructores">Conoce al equipo</a>
+                    </div>
+                    <div id="card">
+                        <div><h4>+1500</h4><p> miembros activos</p></div>
+                        <div><h4>Clases diarias</h4><p> desde las 7:00 hasta las 21:00</p></div>
+                    </div>
+                </div>
+                <aside>
+                    <p><b>Promoción de bienvenida</b></p>
+                    <p>50% en la primera mensualidad para nuevas inscripciones antes del 30/11.</p>
+                    <p><b>Incluye:</b></p>
+                    <ul>
+                        <li>Evaluación inicial</li>
+                        <li>Plan personalizado</li>
+                        <li>Acceso a clases en grupo</li>
+                    </ul>
+                    <a href="#contacto-e-inscripcion" id="promo-button">Aprovechar</a>
+                </aside>
+            </div>
+           
+        </section>
+        </div>
     </header>
     <main>
-        <section id="bienvenida">
-            <article>
-                <h1><b>Tu mejor versión empieza hoy</b></h1>
-                <p>En <b>Fit & Strong</b> combinamos entrenamiento personalizado, clases 
-                    en grupo y planes flexibles para ayudarte 
-                    a alcanzar tus objetivos — fuerza, resistencia o bienestar.</p>
-                <a href="">Ver planes</a>
-                <a href="">Conoce al equipo</a>
-            </article>
-            <article>
-                <label><h3><b>+1500</b></h3><p> miembros activos</p></label>
-                <label><h3><b>Clases diarias</b></h3><p> desde las 7:00 hasta las 21:00</p></label>
-            </article>
-            <article>
-                <p><b>Promoción de bienvenida</b></p>
-                <p>50% en la primera mensualidad para nuevas inscripciones antes del 30/11.</p>
-                <p><b>Incluye:</b></p>
-                <ul>
-                    <li>Evaluación inicial</li>
-                    <li>Plan personalizado</li>
-                    <li>Acceso a clases en grupo</li>
-                </ul>
-                <a href="#contacto-e-inscripcion" id="promo-button">Aprovechar</a>
-            </article>
-        </section>
         <section id="precios">
             <article>
-                <h3></h3>
-                <p></p>
-                <div></div>
-                <div></div>
-                <div></div>
+                <h2>Planes</h2>
+                <p class="nota">Elige el plan que mejor se adapte a tus objetivos</p>
+                <div id="contenedor-precios-grid">
+                    <div>
+                        <h4>Básico</h4>
+                        <h3>€29 / mes</h3>
+                        <ul>
+                            <li>Acceso a sala libre</li>
+                            <li>Vestuario y taquilla</li>
+                            <li>Clases ilimitadas</li>
+                            <li>Evaluación trimestral</li>
+                            <li>Entrenador personal (4 sesiones / mes)</li>
+                        </ul>
+                        <a href="#contacto-e-inscripcion">Registrarme</a>
+                    </div>
+                    <div>
+                        <h4>Estándar</h4>
+                        <h3>€49 / mes</h3>
+                        <ul>
+                            <li>Acceso a sala libre</li>
+                            <li>Vestuario y taquilla</li>
+                            <li>Clases ilimitadas</li>
+                            <li>Evaluación trimestral</li>
+                            <li>Entrenador personal (4 sesiones / mes)</li>
+                        </ul>
+                        <a href="#contacto-e-inscripcion">Registrarme</a>
+                    </div>
+                    <div>
+                        <h4>Premium</h4>
+                        <h3>€79 / mes</h3>
+                        <ul>
+                            <li>Acceso a sala libre</li>
+                            <li>Vestuario y taquilla</li>
+                            <li>Clases ilimitadas</li>
+                            <li>Evaluación trimestral</li>
+                            <li>Entrenador personal (4 sesiones / mes)</li>
+                        </ul>
+                        <a href="#contacto-e-inscripcion">Registrarme</a>
+                    </div>
+                </div>
             </article>
         </section>
-        <section id="instructores"></section>
-        <section id="horarios"></section>
-        <section id="testimonios"></section>
-        <section id="contacto-e-inscripcion"></section>
+        <section id="instructores">
+            <article>
+                <h2>Instructores</h2>
+                <p class="nota">Profesionales certificados con experiencia</p>
+                <div id="contenedor-instructores">
+                    <div class="contenedor-instructor">
+                    <img src="../Descargas/gemini-2.5-flash-image_Change_the_image_style_to_a_real_person_image-0.jpg">
+                    <h4 class="nombre-instructor">Laura García</h4>
+                    <p class="especializacion-instructor">Especialista en fuerza y acondicionamiento. 8 años de experiencia.</p>
+                    </div>
+                    <div class="contenedor-instructor">
+                        <img src="">
+                        <h4 class="nombre-instructor">Carlos Ruiz</h4>
+                        <p class="especializacion-instructor">Entrenador personal y coach nutricional</p>
+                    </div>
+                    <div class="contenedor-instructor">
+                        <img src="">
+                        <h4 class="nombre-instructor">Ana Morales</h4>
+                        <p class="especializacion-instructor">Instructora de clases colectivas: HIIT, Yoga y Pilates.</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section id="horarios">
+            <h2>Horarios y clases</h2>
+            <p class="nota">Clases semanales y actividades</p>
+            <div id="contenedor-horarios">
+                <div>
+                    <h5>Lunes</h5>
+                    <p>07:00-HIIT</p>
+                    <p>18:00-CrossFit</p>
+                </div>
+                <div>
+                    <h5>Martes</h5>
+                    <p>08:00-Yoga</p>
+                    <p>19:00-Spinning</p>
+                </div>
+                <div>
+                    <h5>Miércoles</h5>
+                    <p>07:00-Funcional</p>
+                    <p>20:00-Pilates</p>
+                </div>
+                <div>
+                    <h5>Jueves</h5>
+                    <p>08:00-HIIT</p>
+                    <p>18:30-CrossFit</p>
+                </div>
+            </div>
+        </section>
+        <section id="testimonios">        
+            <h2>Testimonios</h2>
+            <p class="nota">Historias reales de nuestros miembros</p>
+            <article>
+                <h4>"Gracias a Fit & Strong recuperé mi energía y alcancé mi objetivo de perder 12 kg en 6 meses."</h4>
+                <p>-Marcos, 34</p>
+            </article>
+            <article>
+                <h4>"Las clases en grupo son motivadoras y los entrenadores muy profesionales"</h4>
+                <p>-Clara, 27</p>
+            </article>
+            
+        </section>
+        <section id="contacto-e-inscripcion">
+            <h2>Contacto e inscripción</h2>
+            <p class="nota">¿Listo para empezar? Escribenos o reserva una prueba gratuita</p>
+            <form action="">
+                <input type="text">
+                <input type="email">
+                <select name="selector-plan" id="selector-plan">
+                    <option value="pg">Prueba Gratuita</option>
+                    <option value="pb">Plan Básico</option>
+                    <option value="pe">Plan Estándar</option>
+                    <option value="pp">Plan Premium</option>
+                </select>
+                <textarea name="mensaje" id="mensaje" placeholder="¿Alguna pregunta?"></textarea>
+                <button>Enviar</button>
+            </form>
+        </section>
+        <section id="Horario-y-contacto">
+            <h2>Horario</h2>
+            <p>Lunes a Viernes: 07:00 - 21:00</p>
+            <p>Sábados: 09:00 - 14:00</p>
+            <h4>Contacto</h4>
+            <p>Tel_ +34600 000 000</p>
+            <p>Correo: info@fitandstrong.es</p>
+            <button>Llamar ahora</button>
+        </section>
     </main>
     <footer>
         <div id="footer-left">
-            <h4></h4>
-            <p></p>
+            <h2>Fit & Strong</h2>
+            <p class="nota">C/Aarón Vidal López Soldat,2,Valencia</p>
         </div>
         <div id="footer-right">
-            <p></p>
+            <p class="nota">Siguenos en redes • Instagram/Facebook</p>
         </div>
     </footer>
 </body>
