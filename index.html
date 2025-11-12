@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fit & Strong</title>
-    <link rel="shortcut icon" href="/assets/favicon/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="/assets/styles/styles.css">
+    <link rel="shortcut icon" href="assets/favicon/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/styles/styles.css">
 </head>
 <body>
     <header>
@@ -26,16 +26,18 @@
             </div>
             <div id="nav-links">
                 <ul>
-                    <li><a href="#precios">Planes</a></li>
-                    <li><a href="#instructores">Instructores</a></li>
-                    <li><a href="#horarios">Horarios</a></li>
-                    <li><a href="#contacto-e-inscripcion">Contacto</a></li>
+                    <li><a href="#precios"><i class="fa-solid fa-money-check-dollar"></i>Planes</a></li>
+                    <li><a href="#instructores"><i class="fa-solid fa-dumbbell"></i>Instructores</a></li>
+                    <li><a href="#horarios"><i class="fa-solid fa-clock"></i>Horarios</a></li>
+                    <li><a href="#contacto-e-inscripcion"><i class="fa-solid fa-address-book"></i>Contacto</a></li>
                 </ul>
             </div>
-            <button id="cambio-tema"></button>
+            <div id="cambio-tema">
+                <div id="circulo"></div>
+            </div>
             <div id="login-container">
-                <a href="" id="inicio-sesion">Iniciar sesión</a>
-                <a href="" id="registrar">Registrate</a>
+                <a id="inicio-sesion">Iniciar sesión</a>
+                <a id="registrar">Registrate</a>
             </div>
         </nav>
         <section id="bienvenida">
@@ -51,8 +53,8 @@
                         <a href="#instructores">Conoce al equipo</a>
                     </div>
                     <div id="card">
-                        <div><h4>+1500</h4><p> miembros activos</p></div>
-                        <div><h4>Clases diarias</h4><p> desde las 7:00 hasta las 21:00</p></div>
+                        <div><h4>🏋️‍♂️ +1500</h4><p> miembros activos</p></div>
+                        <div><h4>🕔 Clases diarias</h4><p> desde las 7:00 hasta las 21:00</p></div>
                     </div>
                 </div>
                 <aside>
@@ -81,11 +83,11 @@
                         <h4>Básico</h4>
                         <h3>€29 / mes</h3>
                         <ul>
-                            <li>Acceso a sala libre</li>
-                            <li>Vestuario y taquilla</li>
-                            <li>Clases ilimitadas</li>
-                            <li>Evaluación trimestral</li>
-                            <li>Entrenador personal (4 sesiones / mes)</li>
+                            <li><i class="fa-solid fa-check"></i>Acceso a sala libre</li>
+                            <li><i class="fa-solid fa-check"></i>Vestuario y taquilla</li>
+                            <li><i class="fa-solid fa-xmark"></i>Clases ilimitadas</li>
+                            <li><i class="fa-solid fa-xmark"></i>Evaluación trimestral</li>
+                            <li><i class="fa-solid fa-xmark"></i>Entrenador personal (4 sesiones / mes)</li>
                         </ul>
                         <a href="#contacto-e-inscripcion">Registrarme</a>
                     </div>
@@ -93,11 +95,11 @@
                         <h4>Estándar</h4>
                         <h3>€49 / mes</h3>
                         <ul>
-                            <li>Acceso a sala libre</li>
-                            <li>Vestuario y taquilla</li>
-                            <li>Clases ilimitadas</li>
-                            <li>Evaluación trimestral</li>
-                            <li>Entrenador personal (4 sesiones / mes)</li>
+                            <li><i class="fa-solid fa-check"></i>Acceso a sala libre</li>
+                            <li><i class="fa-solid fa-check"></i>Vestuario y taquilla</li>
+                            <li><i class="fa-solid fa-check"></i>Clases ilimitadas</li>
+                            <li><i class="fa-solid fa-check"></i>Evaluación trimestral</li>
+                            <li><i class="fa-solid fa-xmark"></i>Entrenador personal (4 sesiones / mes)</li>
                         </ul>
                         <a href="#contacto-e-inscripcion">Registrarme</a>
                     </div>
@@ -105,11 +107,11 @@
                         <h4>Premium</h4>
                         <h3>€79 / mes</h3>
                         <ul>
-                            <li>Acceso a sala libre</li>
-                            <li>Vestuario y taquilla</li>
-                            <li>Clases ilimitadas</li>
-                            <li>Evaluación trimestral</li>
-                            <li>Entrenador personal (4 sesiones / mes)</li>
+                            <li><i class="fa-solid fa-check"></i>Acceso a sala libre</li>
+                            <li><i class="fa-solid fa-check"></i>Vestuario y taquilla</li>
+                            <li><i class="fa-solid fa-check"></i>Clases ilimitadas</li>
+                            <li><i class="fa-solid fa-check"></i>Evaluación trimestral</li>
+                            <li><i class="fa-solid fa-check"></i>Entrenador personal (4 sesiones / mes)</li>
                         </ul>
                         <a href="#contacto-e-inscripcion">Registrarme</a>
                     </div>
@@ -168,50 +170,61 @@
         <section id="testimonios">        
             <h2>Testimonios</h2>
             <p class="nota">Historias reales de nuestros miembros</p>
-            <article>
-                <h4>"Gracias a Fit & Strong recuperé mi energía y alcancé mi objetivo de perder 12 kg en 6 meses."</h4>
-                <p>-Marcos, 34</p>
-            </article>
-            <article>
-                <h4>"Las clases en grupo son motivadoras y los entrenadores muy profesionales"</h4>
-                <p>-Clara, 27</p>
-            </article>
-            
+            <div id="contenedor-testimonios">
+                <article>
+                    <p>"Gracias a Fit & Strong recuperé mi energía y alcancé mi objetivo de perder 8 kg en 6 meses."</p>
+                    <p>-Marcos, 34</p>
+                </article>
+                <article>
+                    <p>"Las clases en grupo son motivadoras y los entrenadores muy profesionales"</p>
+                    <p>-Clara, 27</p>
+                </article>
+            </div>
         </section>
         <section id="contacto-e-inscripcion">
             <h2>Contacto e inscripción</h2>
             <p class="nota">¿Listo para empezar? Escribenos o reserva una prueba gratuita</p>
-            <form action="">
-                <input type="text">
-                <input type="email">
-                <select name="selector-plan" id="selector-plan">
-                    <option value="pg">Prueba Gratuita</option>
-                    <option value="pb">Plan Básico</option>
-                    <option value="pe">Plan Estándar</option>
-                    <option value="pp">Plan Premium</option>
-                </select>
-                <textarea name="mensaje" id="mensaje" placeholder="¿Alguna pregunta?"></textarea>
-                <button>Enviar</button>
-            </form>
-        </section>
-        <section id="Horario-y-contacto">
-            <h2>Horario</h2>
-            <p>Lunes a Viernes: 07:00 - 21:00</p>
-            <p>Sábados: 09:00 - 14:00</p>
-            <h4>Contacto</h4>
-            <p>Tel_ +34600 000 000</p>
-            <p>Correo: info@fitandstrong.es</p>
-            <button>Llamar ahora</button>
+            <div id="contenedor-contacto-inscripcion">
+                <article>
+                    <form action="">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Tu nombre">
+                        <label for="email">Correo</label>
+                        <input type="email" name="email" id="email" placeholder="tu@ejemplo.com">
+                        <label for="selector-plan">Plan deseado</label>
+                        <select name="selector-plan" id="selector-plan">
+                            <option value="pg">Prueba Gratuita</option>
+                            <option value="pb">Plan Básico</option>
+                            <option value="pe">Plan Estándar</option>
+                            <option value="pp">Plan Premium</option>
+                        </select>
+                        <label for="mensaje">Mensaje</label>
+                        <textarea name="mensaje" id="mensaje" placeholder="¿Alguna pregunta?"></textarea>
+                        <a>Enviar</a>
+                    </form>    
+                </article>
+                <article>
+                    <label>Horario</label>
+                    <p>Lunes a Viernes: 07:00 - 21:00</p>
+                    <p>Sábados: 09:00 - 14:00</p>
+                    <label>Contacto</label>
+                    <p>Tel_ +34600 000 000</p>
+                    <p>Correo: info@fitandstrong.es</p>
+                    <a>Llamar ahora</a>
+                </article>
+            </div>
         </section>
     </main>
     <footer>
         <div id="footer-left">
-            <h2>Fit & Strong</h2>
+            <h5>Fit & Strong</h5>
             <p class="nota">C/Aarón Vidal López Soldat,2,Valencia</p>
         </div>
         <div id="footer-right">
             <p class="nota">Siguenos en redes • Instagram/Facebook</p>
         </div>
     </footer>
+    <script src="assets/components/script.js"></script>
+    <script src="https://kit.fontawesome.com/6436e01252.js" crossorigin="anonymous"></script>
 </body>
 </html>

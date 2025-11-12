@@ -14,6 +14,9 @@
     box-sizing: border-box;
     
 }
+html{
+    height: 100%;
+}
 body{
     width: 100%;
     height: 100%;
@@ -32,17 +35,14 @@ h3{
     font-size: 24px;
     font-family: "Oswald";
 }
-strong{
-    font-size: 20px;
-    font-family: "Oswald";
-}
+
 h4{
     font-size: 20px;
     font-family: "Oswald";
 }
 h5{
     font-size: 18px;
-    font-family: "Monserrat";
+    font-family: "monserrat";
 }
 p{
     font-size: 16px;
@@ -53,23 +53,21 @@ a{
 }
 #contenedor-header{
     background:linear-gradient(135deg,#1E3A8A,#3B5BBB);
-    width: 100%;
-    position: absolute;
+    width: 100vw;
+    position: relative;
     top: 0;
     left: 0;
-    height: 75%;
+    height: 75vh;
 }
 .nota{
     font-size:14px;
 }
 nav{
-    position: absolute;
     width: 100%;
-    top: 0;
-    left: 0;
     display: flex;
     flex-direction: row;
 }
+
 #brand{
     display: flex;
     flex-direction: row;
@@ -106,7 +104,7 @@ nav{
 #nav-links{
     display: flex;
     flex-direction: row;
-    margin-left: 80px;
+    margin-left: -10px;
 }
 #nav-links ul{
     display: flex;
@@ -121,12 +119,35 @@ nav{
     color: #fff;
     font-weight: bolder;
 }
+#nav-links a i{
+    margin-right: 5px;
+}
 #cambio-tema{
-    background-color: blueviolet;
-    height: 20px;
+    height: 30px;
     align-self: center;
-    margin-left: 75px;
-    width: 45px;
+    margin-left: 55px;
+    width: 65px;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    background-color: #F97316;
+    border: 2px solid #F97316;
+    border-radius: 15px;
+}
+#circulo{
+    height: 80%;
+    aspect-ratio: 1 / 1; 
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 2px;
+    top: 3px;
+    z-index: 30;
+    transition: all 0.3s ease;
+}
+#cambio-tema.oscuro div{
+  left: calc(100% - 22px); /* se mueve al otro lado */
+  background-color: #1E3A8A;
 }
 #login-container{
     display: flex;
@@ -261,6 +282,7 @@ nav{
 }
 #card h4{
     color: #fff;
+    font-family: "monserrat";
 }
 #bienvenida aside{
     background-color: #ffffff12;
@@ -290,7 +312,8 @@ nav{
 }
 main section{
     background-color:#f3f4f6;
-    left: 0;
+    margin-left: 15px;
+    padding: 0 20px;
 }
 main h2{
     margin-top: 60px;
@@ -347,6 +370,10 @@ main h2{
     text-wrap: wrap;
     color: #475569;
 }
+#contenedor-precios-grid>div>ul>li>i{
+    margin-left: 10px;
+    margin-right: 10px;
+}
 #contenedor-precios-grid div a{
     text-decoration: none;
     color: #fff;
@@ -370,7 +397,7 @@ main h2{
 
 }
 #instructores .nota{
-    margin-top: -50px;
+    margin-top: -51px;
     margin-left: 300px;
     color: #475569;
 }
@@ -413,7 +440,6 @@ main h2{
     left: 0;
     top: 211.5%;
     padding-bottom: 20px;
-    border-bottom: 2px solid #000;
 }
 #horarios h2{
     margin-top:40px;
@@ -421,7 +447,7 @@ main h2{
 #horarios .nota{
     color: #475569;
     margin-top: -51px;
-    margin-left: 355px;
+    margin-left: 357px;
 }
 #contenedor-horarios{
     display: grid;
@@ -449,5 +475,215 @@ main h2{
 }
 #contenedor-horarios>div>p{
     margin-left: 20px;
+    color: #475569;
+}
+
+#testimonios{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    top: 250.5%;
+
+    padding-bottom: 20px;
+    border-bottom: 2px solid #000;
+}
+#testimonios h2{
+    margin-top:40px;
+}
+#testimonios .nota{
+    color: #475569;
+    margin-top: -51px;
+    margin-left: 290px;
+}
+#contenedor-testimonios{
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: repeat(2,1fr);
+    
+    align-self: center;
+    gap: 1.25rem;
+    padding-bottom: 20px;
+}
+#contenedor-testimonios article{
+    display: flex;
+    border-radius: 15px;
+    flex-direction: column;
+    width: 550px;
+    background-color: #fff;
+}
+#contenedor-testimonios article p:first-of-type{
+    font-family: "Roboto Slab";
+    color: #0F162A;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+#contenedor-testimonios article p{
+    color: #475569;
+    margin-left: 10px;
+}
+#contacto-e-inscripcion{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    top: 291%;
+    padding-bottom: 20px;
+}
+#contacto-e-inscripcion h2{
+    margin-top:40px;
+}
+#contacto-e-inscripcion .nota{
+    color: #475569;
+    margin-top: -51px;
+    margin-left: 425px;
+}
+#contenedor-contacto-inscripcion{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+#contenedor-contacto-inscripcion article{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 15px;
+}
+#contenedor-contacto-inscripcion article:nth-child(2){
+    padding: 10px 10px;
+    height: 100%;
+}
+#contenedor-contacto-inscripcion article:first-of-type{
+    width: 50%;
+    margin-left: 125px;
+}
+
+
+#contenedor-contacto-inscripcion article:nth-child(2) label{
+    margin-bottom: 3px;
+    margin-left: 10px;
+    font-family: "monserrat";
+    font-weight: bolder;
+    font-size: 1.10rem;
+}
+#contenedor-contacto-inscripcion article:nth-child(2) p:first-of-type{
+    margin-top: 0px;
+}
+#contenedor-contacto-inscripcion article:nth-child(2) p:nth-of-type(3){
+    margin-top: 0px;
+}
+#contenedor-contacto-inscripcion article:nth-child(2) p{
+    font-size: 14px;
+    margin-left: 10px;
+    color: #475569;
+}
+#contenedor-contacto-inscripcion article:nth-child(2) a{
+    margin-bottom: 5px;
+    margin-left: 10px;
+    background-color: #F97316;
+    font-weight: bolder;
+    width: 150px;
+    border: 2px solid #F97316;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 10px;
+    color: #fff;
+}
+#contenedor-contacto-inscripcion article:nth-child(2) p:nth-of-type(2){
+    margin-top:-10px;
+}
+#contenedor-contacto-inscripcion article:nth-child(2) p:nth-of-type(4){
+    margin-top: -10px;
+}
+#contenedor-contacto-inscripcion form{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+#contenedor-contacto-inscripcion form label{
+    margin-bottom: 3px;
+    margin-left: 20px;
+    font-family: "monserrat";
+    font-weight: bolder;
+    font-size: 1.10rem;
+}
+#contenedor-contacto-inscripcion form label:first-of-type{margin-top: 20px;}
+#contenedor-contacto-inscripcion form input{
+    margin-bottom: 5px;
+    margin-left: 20px;
+    border: 2px solid #f3f4f6;
+    background-color: #fff;
+    width: 232%;
+    border-radius: 10px;
+    color: #000;
+    padding: 10px 3px;
+}
+#contenedor-contacto-inscripcion form input::placeholder{
+    color: #475569;
+}
+#contenedor-contacto-inscripcion form select{
+    margin-bottom: 5px;
+    margin-left: 20px;
+    border: 2px solid #f3f4f6;
+    background-color: #f3f4f6;
+    width: 232%;
+    border-radius: 10px;
+    color: #000;
+    padding: 10px 3px;
+}
+#contenedor-contacto-inscripcion form textarea{
+    margin-bottom:10px;
+    margin-left: 20px;
+    border: 2px solid #f3f4f6;
+    background-color: #fff;
+    width: 232%;
+    border-radius: 10px;
+    color: #000;
+    padding: 10px 3px;
+}
+#contenedor-contacto-inscripcion form textarea::placeholder{
+    color: #475569;
+}
+#contenedor-contacto-inscripcion form a{
+    margin-bottom: 5px;
+    margin-left: 20px;
+    background-color: #1E3A8A;
+    font-weight: bolder;
+    width: 150px;
+    border: 2px solid #1E3A8A;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 10px;
+    color: #fff;
+}
+footer{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    margin-left: 15px;
+    padding: 0 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    left: 0;
+    top: 361%;
+    padding-bottom: 20px;
+    background-color: #f3f4f6;
+}
+#footer-left{
+    margin-left: 125px;
+}
+#footer-left h5{
+    color: #475569;
+    margin-bottom: -10px;
+    font-weight: bolder;
+}
+#footer-left p{
+    color: #475569;
+}
+#footer-right{
+    margin-right: 125px;
+    margin-top: 23px;
     color: #475569;
 }
