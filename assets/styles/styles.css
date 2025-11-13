@@ -312,8 +312,7 @@ nav{
 }
 main section{
     background-color:#f3f4f6;
-    margin-left: 15px;
-    padding: 0 20px;
+    padding: 0 25px;
 }
 main h2{
     margin-top: 60px;
@@ -349,6 +348,10 @@ main h2{
     border-radius: 15px;
     width: 330px;
     padding-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+#contenedor-precios-grid div:hover{
+    transform: translateY(-10px);
 }
 #contenedor-precios-grid div h4{
     margin-left: 20px;
@@ -392,8 +395,7 @@ main h2{
     display: flex;
     flex-direction: column;
     left: 0;
-    top: 138%;
-    border-bottom: 2px solid #000;
+    top: 139%;
 
 }
 #instructores .nota{
@@ -416,13 +418,19 @@ main h2{
     background-color: #fff;
     border-radius: 15px;
     align-items: center;
+    transition: transform 0.3s ease;
 }
+
 .contenedor-instructor img{
     margin-top: 20px;
     width: 225px;
     border-radius: 15px;
     height: 225px;
+    transition: transform 0.3s ease;
     
+}
+.contenedor-instructor:hover img{
+    transform: scale(1.05);
 }
 .nombre-instructor{
     margin-top: 5px;
@@ -544,6 +552,7 @@ main h2{
     display: flex;
     flex-direction: row;
     gap: 20px;
+    padding-bottom: 60px;
 }
 #contenedor-contacto-inscripcion article{
     display: flex;
@@ -618,6 +627,7 @@ main h2{
     width: 232%;
     border-radius: 10px;
     color: #000;
+    outline: none;
     padding: 10px 3px;
 }
 #contenedor-contacto-inscripcion form input::placeholder{
@@ -631,6 +641,7 @@ main h2{
     width: 232%;
     border-radius: 10px;
     color: #000;
+    outline: none;
     padding: 10px 3px;
 }
 #contenedor-contacto-inscripcion form textarea{
@@ -639,9 +650,11 @@ main h2{
     border: 2px solid #f3f4f6;
     background-color: #fff;
     width: 232%;
+    resize: none;
     border-radius: 10px;
     color: #000;
     padding: 10px 3px;
+    outline: none;
 }
 #contenedor-contacto-inscripcion form textarea::placeholder{
     color: #475569;
@@ -662,12 +675,11 @@ footer{
     position: absolute;
     width: 100%;
     display: flex;
-    margin-left: 15px;
     padding: 0 20px;
     flex-direction: row;
     justify-content: space-between;
     left: 0;
-    top: 361%;
+    top: 365%;
     padding-bottom: 20px;
     background-color: #f3f4f6;
 }
@@ -686,4 +698,7 @@ footer{
     margin-right: 125px;
     margin-top: 23px;
     color: #475569;
+}
+a{
+    cursor: pointer;
 }
