@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fit & Strong</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="icon" href="./assets/favicon/logo.png" type="image/png">
+
+<style>
+:root{
+    --primary:#1E3A8A;
+    --secondary:#3B5BBB;
+    --accent:#F97316;
+    --dark:#0F162A;
+    --light:#f3f4f6;
+    --white:#ffffff;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url("../fonts/Oswald-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "RobotoSlab";
+    src: url("../fonts/RobotoSlab-VariableFont_wght.ttf");
+}
+
+
+/* ===== CLASES DE FUENTES ===== */
+
+.fuente-titulo {
+    font-family: "Oswald", sans-serif;
+}
+
+.fuente-texto {
+    font-family: "Montserrat", sans-serif;
+}
+
+.fuente-destacada {
+    font-family: "RobotoSlab", serif;
+}
+
+body{
+    background:var(--light);
+}
+
+/* NAVBAR */
+.navbar-custom{
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+}
+
+/* CARDS */
+.card-modern{
+    border:none;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* BOTONES */
+.btn-primary{
+    background:var(--primary);
+    border:none;
+}
+.btn-primary:hover{
+    background:var(--secondary);
+}
+.btn-accent{
+    background:var(--accent);
+    color:white;
+}
+
+.section-title{
+    color:var(--primary);
+    font-weight:600;
+}
+
+.exercise-img{
+    width:100%;
+    border-radius:10px;
+    height:180px;
+    object-fit:cover;
+}
+.carousel img{
+    width: 100%;
+    object-fit: cover;
+    border-radius:15px;
+}
+@media (min-width: 992px) {
+    .carousel img{
+        height: 70vh;
+    }
+}
+
+/* Tablets */
+@media (max-width: 991px) {
+    .carousel img{
+        height: 50vh;
+    }
+}
+
+/* Móviles */
+@media (max-width: 576px) {
+    .carousel img{
+        height: 35vh;
+    }
+}
+.progress-bar{
+    background:var(--accent);
+}
+#logo {
+    width: 2rem;
+    height: 2rem;
+}
+* Contenedor de columnas */
+.row-equal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* espacio entre tarjetas */
+}
+
+/* Cada columna toma la misma altura */
+.row-equal > .col-md-4 {
+    display: flex;
+}
+
+/* Tarjetas con altura completa y distribución del contenido */
+.card-modern {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto; /* se expande para llenar la columna */
+}
+
+/* Mantener los botones al fondo */
+.card-modern .btn-accent {
+    margin-top: auto;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-md navbar-dark navbar-custom">
+  <div class="container">
+    <a class="navbar-brand fw-bold d-flex align-items-center fuente-titulo" href="./index.html">
+      <div style="
+        background: white;
+        border-radius: 8px;
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 8px;
+      ">
+        <svg id="logo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 2rem; height: 2rem;">
+          <rect x="1" y="9" width="4" height="6" rx="1" fill="#1E3A8A" />
+          <rect x="19" y="9" width="4" height="6" rx="1" fill="#1E3A8A" />
+          <rect x="6" y="10" width="12" height="4" rx="1" fill="#1E3A8A" />
+        </svg>
+      </div>
+      Fit & Strong
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link fuente-texto" href="./imc.html">IMC</a></li>
+        <li class="nav-item"><a class="nav-link fuente-texto" href="./dietas.html">Dietas</a></li>
+        <li class="nav-item"><a class="nav-link fuente-texto" href="./progreso.html">Progreso</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container pt-5 col-12 col-md-10 col-lg-8">
+
+    <section id="catalogo">
+        <h3 class="section-title mb-4">📚 Catálogo de Ejercicios</h3>
+
+        <div id="carouselEjercicios" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+<!-- 1 -->
+                <div class="carousel-item active text-center">
+                    <img src="./images/press banca.jpg" class="d-block w-100 exercise-img">
+                    <div class="carousel-caption bg-dark bg-opacity-50 rounded p-3">
+                        <h5>Press Banca</h5>
+                        <p>Ejercicio compuesto para pecho, tríceps y hombros.</p>
+                        <button class="btn btn-accent" onclick="agregarEjercicio('Press Banca')">
+                        Agregar al entrenamiento
+                        </button>
+                    </div>
+                </div>
+
+<!-- 2 -->
+                <div class="carousel-item text-center">
+                    <img src="./images/sentadilla.jpg" class="d-block w-100 exercise-img">
+                    <div class="carousel-caption bg-dark bg-opacity-50 rounded p-3">
+                        <h5>Sentadilla</h5>
+                        <p>Fortalece piernas y core.</p>
+                        <button class="btn btn-accent" onclick="agregarEjercicio('Sentadilla')">
+                        Agregar al entrenamiento
+                        </button>
+                    </div>
+                </div>
+
+<!-- 3 -->
+                <div class="carousel-item text-center">
+                    <img src="./images/peso muerto.jpg" class="d-block w-100 exercise-img">
+                    <div class="carousel-caption bg-dark bg-opacity-50 rounded p-3">
+                        <h5>Peso Muerto</h5>
+                        <p>Trabajo completo de cadena posterior.</p>
+                        <button class="btn btn-accent" onclick="agregarEjercicio('Peso Muerto')">
+                        Agregar al entrenamiento
+                        </button>
+                    </div>
+                </div>
+
+<!-- 4 -->
+                <div class="carousel-item text-center">
+                    <img src="./images/dominadas.jpg" class="d-block w-100 exercise-img">
+                    <div class="carousel-caption bg-dark bg-opacity-50 rounded p-3">
+                        <h5>Dominadas</h5>
+                        <p>Ejercicio de espalda y bíceps.</p>
+                        <button class="btn btn-accent" onclick="agregarEjercicio('Dominadas')">
+                        Agregar al entrenamiento
+                        </button>
+                    </div>
+                </div>
+
+<!-- 5 -->
+                <div class="carousel-item text-center">
+                    <img src="./images/fondos.jpg" class="d-block w-100 exercise-img">
+                    <div class="carousel-caption bg-dark bg-opacity-50 rounded p-3">
+                        <h5>Fondos</h5>
+                        <p>Trabajo de tríceps y pecho.</p>
+                        <button class="btn btn-accent" onclick="agregarEjercicio('Fondos')">
+                        Agregar al entrenamiento
+                        </button>
+                    </div>
+                </div>
+
+<!-- 6 -->
+                <div class="carousel-item text-center">
+                    <img src="./images/curl biceps.jpg" class="d-block w-100 exercise-img">
+                    <div  class="carousel-caption bg-dark bg-opacity-50 rounded p-3">
+                        <h5>Curl Bíceps</h5>
+                        <p>Aislamiento de bíceps.</p>
+                        <button class="btn btn-accent" onclick="agregarEjercicio('Curl Bíceps')">
+                        Agregar al entrenamiento
+                        </button>
+                    </div>
+                </div>
+
+<!-- 7 -->
+                <div class="carousel-item text-center">
+                    <img id="press-militar" src="./images/press militar.jpg" class="d-block w-100 exercise-img">
+                    <div class="carousel-caption bg-dark bg-opacity-50 rounded p-3">
+                        <h5>Press Militar</h5>
+                        <p>Fortalece hombros.</p>
+                        <button class="btn btn-accent" onclick="agregarEjercicio('Press Militar')">
+                        Agregar al entrenamiento
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 8 -->
+                <div class="carousel-item text-center">
+                    <img src="./images/remo en polea.jpg" class="d-block w-100 exercise-img">
+                    <div class="carousel-caption bg-dark bg-opacity-50 rounded p-3">
+                        <h5>Remo con Polea</h5>
+                        <p>Espalda media.</p>
+                        <button class="btn btn-accent" onclick="agregarEjercicio('Remo con Barra')">
+                        Agregar al entrenamiento
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 9 -->
+                <div class="carousel-item text-center">
+                    <img src="./images/zancadas.jpg" class="d-block w-100 exercise-img">
+                    <div class="carousel-caption bg-dark bg-opacity-50 rounded p-3">
+                        <h5>Zancadas</h5>
+                        <p>Trabajo unilateral de piernas.</p>
+                        <button class="btn btn-accent" onclick="agregarEjercicio('Zancadas')">
+                        Agregar al entrenamiento
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 10 -->
+                <div class="carousel-item text-center">
+                    <img src="./images/elevaciones laterales.jpg" class="d-block w-100 exercise-img">
+                    <div class="carousel-caption bg-dark bg-opacity-50 rounded p-3">
+                        <h5>Elevaciones Laterales</h5>
+                        <p>Aislamiento del deltoide lateral.</p>
+                        <button class="btn btn-accent" onclick="agregarEjercicio('Elevaciones Laterales')">
+                        Agregar al entrenamiento
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselEjercicios" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselEjercicios" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        </button>
+
+        </div>
+    </section>
+
+</div>
+<div class="container py-5 col-12 col-md-10 col-lg-8">
+<!-- ================= ENTRENAMIENTOS ================= -->
+    <section id="crear">
+        <h3 class="section-title mb-4">🏋 Crear Entrenamiento</h3>
+
+        <div class="card card-modern p-4">
+
+        <div id="mensajeVacio" class="text-center text-muted py-4">
+        Aún no tienes un plan de entrenamiento creado.
+        </div>
+
+        <div id="ejerciciosSeleccionados"></div>
+
+        </div>
+    </section>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+let ejercicios=[];
+
+function agregarEjercicio(nombre){
+
+    // evitar duplicados
+    if(ejercicios.find(e => e.nombre === nombre)){
+        alert("Este ejercicio ya está en el plan");
+        return;
+    }
+
+    ejercicios.push({nombre:nombre,series:3});
+    renderEjercicios();
+}
+
+function renderEjercicios(){
+
+    let cont=document.getElementById("ejerciciosSeleccionados");
+    let mensaje=document.getElementById("mensajeVacio");
+
+    cont.innerHTML="";
+
+    if(ejercicios.length === 0){
+        mensaje.style.display="block";
+        return;
+    }
+
+    mensaje.style.display="none";
+
+    ejercicios.forEach((ej,i)=>{
+        cont.innerHTML+=`
+        <div class="card card-modern p-3 mb-3">
+        <div class="d-flex justify-content-between">
+        <h5>${ej.nombre}</h5>
+        <button class="btn btn-sm btn-danger" onclick="eliminarEjercicio(${i})">X</button>
+        </div>
+
+        <label>Series</label>
+        <input type="number" value="${ej.series}" min="1"
+        class="form-control mb-3"
+        onchange="actualizarSeries(${i},this.value)">
+
+        ${generarSeries(ej.series)}
+        </div>`;
+    });
+}
+
+function eliminarEjercicio(index){
+    ejercicios.splice(index,1);
+    renderEjercicios();
+}
+
+function actualizarSeries(i,val){
+    ejercicios[i].series=parseInt(val);
+    renderEjercicios();
+}
+
+function generarSeries(cant){
+    let html="";
+    for(let i=1;i<=cant;i++){
+        html+=`
+        <div class="row mb-2">
+        <div class="col-2">Serie ${i}</div>
+        <div class="col">
+        <input type="number" placeholder="Peso (kg)" class="form-control">
+        </div>
+        <div class="col">
+        <input type="number" placeholder="Reps" class="form-control">
+        </div>
+        </div>`;
+    }
+    return html;
+}
+</script>
+<footer class="bg-dark text-white py-4 mt-5">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+        
+        <div>
+            <h5 class="mb-1">Fit & Strong</h5>
+            <p class="mb-0 small">C/Aarón Vidal López Soldat, 2, Valencia</p>
+        </div>
+
+        <div>
+            <p class="mb-0 small">Síguenos en redes • Instagram / Facebook</p>
+        </div>
+
+    </div>
+</footer>
+</body>
+
+</html>
+
